@@ -166,8 +166,13 @@ install_bbr() {
     fi
 
     if [[ "${release}" == "centos" ]]; then
-        install_elrepo
-        yum --enablerepo=elrepo-kernel -y install kernel-ml kernel-ml-devel
+        #install_elrepo
+        #yum --enablerepo=elrepo-kernel -y install kernel-ml kernel-ml-devel
+        rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+        yum install -y http://elrepo.org/linux/kernel/el6/x86_64/RPMS/http://elrepo.org/linux/kernel/el6/x86_64/RPMS/kernel-ml-4.12.10-1.el6.elrepo.x86_64.rpm
+        yum remove -y kernel-headers
+        yum install -y http://elrepo.org/linux/kernel/el6/x86_64/RPMS/http://elrepo.org/linux/kernel/el6/x86_64/RPMS/kernel-ml-headers-4.12.10-1.el6.elrepo.x86_64.rpm
+        yum install -y http://elrepo.org/linux/kernel/el6/x86_64/RPMS/http://elrepo.org/linux/kernel/el6/x86_64/RPMS/kernel-ml-devel-4.12.10-1.el6.elrepo.x86_64.rpm
         if [ $? -ne 0 ]; then
             echo -e "${red}Error:${plain} Install latest kernel failed, please check it."
             exit 1
