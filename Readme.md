@@ -82,3 +82,10 @@ pptp.sh(Deprecated)
 - Intro: https://teddysun.com/134.html
 
 Copyright (C) 2013-2017 Teddysun <i@teddysun.com>
+
+ocserv-auto.sh
+===================
+yum update
+yum install wget net-tools
+wget script-link
+sh ocserv-auto.sh
