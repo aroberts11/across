@@ -4,7 +4,7 @@
 # This is a ocserv installation for CentOS 7       #
 # Version: 0.1.0 2016-03-22                        #
 # Author: Lop                                      #
-# Website: https://www.izcv.com                    #
+# Website: http://www.izcv.com                     #
 #                                                  #
 ####################################################
 
