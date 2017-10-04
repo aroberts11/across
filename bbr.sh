@@ -169,10 +169,10 @@ install_bbr() {
         #install_elrepo
         #yum --enablerepo=elrepo-kernel -y install kernel-ml kernel-ml-devel
         rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-        yum install -y http://down.weget.cc/kernel/kernel-ml-4.12.10-1.el6.elrepo.x86_64.rpm
+        yum install -y http://down.weget.cc/kernel/v4.12.4/kernel-ml-4.12.4-1.el7.elrepo.x86_64.rpm
         yum remove -y kernel-headers
-        yum install -y http://down.weget.cc/kernel/kernel-ml-headers-4.12.10-1.el6.elrepo.x86_64.rpm
-        yum install -y http://down.weget.cc/kernel/kernel-ml-devel-4.12.10-1.el6.elrepo.x86_64.rpm
+        yum install -y http://down.weget.cc/kernel/v4.12.4/kernel-ml-headers-4.12.4-1.el7.elrepo.x86_64.rpm
+        yum install -y http://down.weget.cc/kernel/v4.12.4/kernel-ml-devel-4.12.4-1.el7.elrepo.x86_64.rpm
         if [ $? -ne 0 ]; then
             echo -e "${red}Error:${plain} Install latest kernel failed, please check it."
             exit 1
