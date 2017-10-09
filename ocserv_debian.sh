@@ -129,7 +129,7 @@ FILL1='UserName'
 FILL2='PassWord'
 }
 [ -n "$FILL1" -a -n "$FILL2" ] && {
-FILLIT1='MoeClub.org'
+FILLIT1='Achaos'
 echo -ne "\n\e[35mPlease input AnyConnet $FILL1\e[33m[Default:\e[32mMoeClub.org\e[33m]\e[0m: "
 read tmpFILL1
 if [[ -n "$tmpFILL1" ]]; then
@@ -306,7 +306,7 @@ certtool --generate-dh-params --outfile /etc/ocserv/dh.pem
  
 cat >/etc/ocserv/template/server.tmp<<EOF
 cn = "$MyDomain" 
-organization = "MoeClub.org" 
+organization = "Achaos" 
 serial = 2
 expiration_days = 1825
 signing_key 
